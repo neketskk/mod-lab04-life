@@ -160,7 +160,7 @@ namespace cli_life
         }
         public void LoadConfig(String path)
         {
-            data = JsonConvert.DeserializeObject<Data>(File.ReadAllText(path));
+            data = JsonSerializer.Deserialize<Data>(File.ReadAllText(path));
         }
         public void LoadState(Board board, String path)
         {
